@@ -1,0 +1,54 @@
+* {
+    -color-dark: #7a7a7a;
+    -color-light: #cccccc;
+}
+
+.root {
+    -fx-background-color: #ffffff;
+}
+
+.label-big {
+    -fx-font-size: 40;
+}
+
+.label-small {
+    -fx-font-size: 20;
+}
+
+.clock-big {
+    -fx-font-size: 40;
+}
+
+.clock-small {
+    -fx-font-size: 20;
+}
+
+.box-centered {
+    -fx-alignment: center;
+}
+
+.button {
+    -fx-min-height: 25;
+    -fx-min-width: 65;
+    -fx-background-color: -color-light;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+}
+
+.button:hover {
+    -fx-border-color: -color-dark;
+    -fx-border-insets: -1;
+}
+
+.button:armed {
+    -fx-background-color: -color-dark;
+}
+
+.check-box .box {
+	-fx-background-color: -color-light;
+	-fx-background-radius: 0;
+}
+
+.check-box:selected .mark {
+	-fx-background-color: #000000;
+}
