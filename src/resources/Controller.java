@@ -48,6 +48,7 @@ public class Controller implements Initializable {
 
     @FXML CheckBox chckbx_seconds;
 
+    @FXML ToggleSwitch tgglswtch;
     @FXML Button btn_pause;
     @FXML Button btn_start;
 
@@ -75,9 +76,11 @@ public class Controller implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         setRegion();
         setRegionHalfStep();
+        setToggleSwitch();
         setTimelineSprtr();
         initTime();
         initPause();
+
     }
 
     private void setRegion() {
@@ -95,6 +98,18 @@ public class Controller implements Initializable {
         setListenerRegion(rgn_pause, vspace_big, 3);
         setListenerRegion(rgn_start, vspace_small, 9);
         setListenerRegion(rgn_end, vspace_small, 9);
+    }
+
+    private void setToggleSwitch() {
+        tgglswtch.selectedProperty().addListener( (v, oldValue, newValue) -> {
+
+            cut = (newValue.booleanValue()) ? 0 : 3;
+
+            if(time_t != null) { lbl_time.setText(time_t.substring(0, time_t.length()-cut)); }
+            if(time_p != null) { lbl_pause.setText(time_p.substring(0, time_p.length()-cut)); }
+            if(time_start != null) { lbl_start.setText(time_start.substring(0, time_start.length()-cut)); }
+            if(time_stop != null) { lbl_end.setText(time_stop.substring(0, time_stop.length()-cut)); }
+        });
     }
 
     private void setListenerRegion(Region region, Double max, int step) {
@@ -116,17 +131,6 @@ public class Controller implements Initializable {
                 )
         );
         timeline_sep.playFromStart();
-
-    }
-
-    public void checkBoxClicked() {
-
-        cut = (chckbx_seconds.isSelected()) ? 0 : 3;
-
-        if(time_t != null) { lbl_time.setText(time_t.substring(0, time_t.length()-cut)); }
-        if(time_p != null) { lbl_pause.setText(time_p.substring(0, time_p.length()-cut)); }
-        if(time_start != null) { lbl_start.setText(time_start.substring(0, time_start.length()-cut)); }
-        if(time_stop != null) { lbl_end.setText(time_stop.substring(0, time_stop.length()-cut)); }
 
     }
 

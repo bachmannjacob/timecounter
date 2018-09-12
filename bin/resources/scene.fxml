@@ -6,6 +6,7 @@
 <?import javafx.scene.layout.Region?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Separator?>
+<?import resources.ToggleSwitch?>
 <VBox fx:id="root" fx:controller="resources.Controller" xmlns:fx="http://javafx.com/fxml">
     <Region fx:id="rgn_time"/>
     <HBox styleClass="box-centered">
@@ -34,9 +35,9 @@
     <Region fx:id="vregion"/>
     <HBox spacing="7">
         <padding><Insets left="10" bottom="10" right="8"/></padding>
-        <CheckBox text="show seconds" fx:id="chckbx_seconds" onAction="#checkBoxClicked"/>
+        <ToggleSwitch fx:id="tgglswtch"/>
+        <Label text="show seconds" styleClass="label-seconds"/>
         <Region fx:id="hregion"/>
-        <!-- <Button text="Value" onAction="#valueClicked"/> -->
         <Button text="Pause" fx:id="btn_pause" onAction="#pauseClicked" disable="true"/>
         <Button text="Start" fx:id="btn_start" onAction="#startClicked"/>
     </HBox>

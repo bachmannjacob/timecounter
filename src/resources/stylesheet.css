@@ -27,6 +27,10 @@
     -fx-alignment: center;
 }
 
+.label-seconds {
+    -fx-min-height: 25;
+}
+
 .button {
     -fx-min-height: 25;
     -fx-min-width: 65;
@@ -43,16 +47,6 @@
 
 .button:armed {
     -fx-background-color: -color-dark;
-}
-
-.check-box {
-    -fx-min-height: 25;
-    -fx-min-width: 65;
-}
-
-.check-box .box {
-	-fx-background-color: -color-light;
-	-fx-background-radius: 0;
 }
 
 .check-box:selected .mark {
