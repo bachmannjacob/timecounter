@@ -46,8 +46,6 @@ public class Controller implements Initializable {
     @FXML Label lbl_start;
     @FXML Label lbl_end;
 
-    @FXML CheckBox chckbx_seconds;
-
     @FXML ToggleSwitch tgglswtch;
     @FXML Button btn_pause;
     @FXML Button btn_start;

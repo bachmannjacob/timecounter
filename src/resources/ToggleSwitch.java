@@ -82,7 +82,6 @@ public class ToggleSwitch extends Parent {
         });
 
         hoverProperty().addListener( (v, oldValue, newValue) -> {
-            System.out.println(newValue.booleanValue());
 
             if(newValue) {
                 if(!selected.get()) {
@@ -108,4 +107,7 @@ public class ToggleSwitch extends Parent {
 
     }
 
+    public void setAccent(Color color) {
+        accent = color;
+    }
 }
