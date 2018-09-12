@@ -32,7 +32,7 @@
         <Label fx:id="lbl_end" text="0:00" styleClass="clock-small" disable="true"/>
     </HBox>
     <Region fx:id="vregion"/>
-    <HBox spacing="2">
+    <HBox spacing="7">
         <padding><Insets left="10" bottom="10" right="8"/></padding>
         <CheckBox text="show seconds" fx:id="chckbx_seconds" onAction="#checkBoxClicked"/>
         <Region fx:id="hregion"/>

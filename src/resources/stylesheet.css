@@ -32,16 +32,22 @@
     -fx-min-width: 65;
     -fx-background-color: -color-light;
     -fx-background-radius: 0;
-    -fx-background-insets: 0;
+    -fx-background-insets: -2;
 }
 
 .button:hover {
     -fx-border-color: -color-dark;
-    -fx-border-insets: -1;
+    -fx-border-insets: -2;
+    -fx-border-width: 2;
 }
 
 .button:armed {
     -fx-background-color: -color-dark;
+}
+
+.check-box {
+    -fx-min-height: 25;
+    -fx-min-width: 65;
 }
 
 .check-box .box {
